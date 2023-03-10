@@ -39,6 +39,6 @@ def func(p: str):
                     print(f"До выхода курса осталось: {diff_date.seconds // 3600} часов и {diff_date.seconds // 60} минут")
 
 
-func(param)
+#func(param)
 
 
