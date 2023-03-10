@@ -2,7 +2,7 @@
 # 3.5 - 8
 from datetime import date, time, datetime, timedelta
 
-param = input()
+# param = input()
 
 
 def func(p: str):
