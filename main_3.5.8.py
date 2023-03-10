@@ -1,7 +1,11 @@
 
 # 3.5 - 8
-from datetime import date, time, datetime, timedelta
+from datetime import datetime
+from pytest_gen import StepikTestGenerator
 
+t = StepikTestGenerator('input_test_3.5.8', 'output_test_3.5.8', 'test.py', 'func')
+t.doit()
+t.get_result()
 # param = input()
 
 
