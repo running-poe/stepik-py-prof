@@ -7,6 +7,7 @@ t = StepikTestGenerator('input_test_3.5.8', 'output_test_3.5.8', 'test.py', 'mai
 t.doit()
 t.get_result()
 
+
 # param = input()
 
 
