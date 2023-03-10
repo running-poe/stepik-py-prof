@@ -1,14 +1,5 @@
 class StepikTestGenerator:
 
-     # читаем из файлов изначально через объект настроек
-    def __init__(self, configuration):
-        fname_input_test = configuration.get("input_test")
-        fname_results = configuration.get("results")
-        method = configuration.get("method")
-        self.__init__(fname_input_test, fname_results, method)
-
-
-
     # читаем из файлов
     def __init__(self, fname_input_test: str, fname_results: str, fname_pytest: str, main_module: str, method: str):
         self.__stream_input_in = []
@@ -36,7 +27,7 @@ class StepikTestGenerator:
     def doit(self):
         self.__stream_input_out = self.__parse(True, self.__stream_input_in)
         self.__stream_result_out = self.__parse(False, self.__stream_result_in)
-
+        self.__create_pytest()
 
     def __parse(self, is_input: bool, stream_in: list):
         reading_input: bool = False
@@ -71,8 +62,8 @@ class StepikTestGenerator:
                 f.write(f"    assert {self.__method}({s1}) == ({s2})\n\n\n")
 
 
-    def get_result(self):
-        self.__create_pytest()
+
+
 
 ''' 
     
