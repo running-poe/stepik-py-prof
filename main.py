@@ -28,7 +28,7 @@ def func(p: str):
                 return f"До выхода курса осталось: {diff_date.days} {ds.get(diff_date.days % 10)[0]}"
             if diff_date.seconds//3600 > 0:
                 return f"До выхода курса осталось: {diff_date.days} дней и " \
-                       f"{(diff_date.seconds//3600) % 24} {ds.get(((diff_date.seconds//3600) % 24) % 10)[1]} часов"
+                       f"{(diff_date.seconds//3600) % 24} {ds.get(((diff_date.seconds//3600) % 24) % 10)[1]}"
 
         if diff_date.days == 0:
             if diff_date.seconds//3600 == 0:
@@ -38,11 +38,11 @@ def func(p: str):
                 if diff_date.seconds//60 == 0:
                     return f"До выхода курса осталось: {diff_date.seconds//3600} " \
                            f"{ds.get((diff_date.seconds//3600)%10)[1]} и {diff_date.seconds//60} " \
-                           f"{ds.get((diff_date.seconds//60) % 10)[2]} минут"
+                           f"{ds.get((diff_date.seconds//60) % 10)[2]}"
                 if diff_date.seconds//60 > 0:
                     return f"До выхода курса осталось: {diff_date.seconds//3600} " \
                            f"{ds.get((diff_date.seconds//3600)%10)[1]} и {diff_date.seconds//60} " \
-                           f"{ds.get((diff_date.seconds//60) % 10)[2]} минут"
+                           f"{ds.get((diff_date.seconds//60) % 10)[2]}"
 
 
 #func(param)
