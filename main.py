@@ -5,8 +5,8 @@ from datetime import date, time, datetime, timedelta
 # param = input()
 
 
-def func(p: str):
-    curr_date = datetime.strptime(p, "%d.%m.%Y %H:%M") - datetime.min
+def func(**kwargs):
+    curr_date = datetime.strptime(kwargs[0], "%d.%m.%Y %H:%M") - datetime.min
     release_date = datetime(year=2022, month=11, day=8, hour=12, minute=0) - datetime.min
     ds = {0: ('дней', 'часов', 'минут'),
           1: ('день', 'час', 'минута'),
