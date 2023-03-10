@@ -20,23 +20,23 @@ def func(p: str):
           9: ('дней', 'часов', 'минут')}
 
     if release_date < curr_date:
-        print('Курс уже вышел!')
+        return 'Курс уже вышел!'
     else:
         diff_date = release_date - curr_date
         if diff_date.days > 0:
             if diff_date.seconds//3600 == 0:
-                print(f"До выхода курса осталось: {diff_date.days} {ds[diff_date.days % 10]}")
+                return f"До выхода курса осталось: {diff_date.days} {ds[diff_date.days % 10]}"
             if diff_date.seconds//3600 > 0:
-                print(f"До выхода курса осталось: {diff_date.days} дней и {(diff_date.seconds//3600) % 24} часов")
+                return f"До выхода курса осталось: {diff_date.days} дней и {(diff_date.seconds//3600) % 24} часов"
 
         if diff_date.days == 0:
             if diff_date.seconds//3600 == 0:
-                print(f"До выхода курса осталось: {diff_date.seconds//3600}")
+                return f"До выхода курса осталось: {diff_date.seconds//3600}"
             if diff_date.seconds//3600 > 0:
                 if diff_date.seconds//60 == 0:
-                    print(f"До выхода курса осталось: {diff_date.seconds//3600} часов и {diff_date.seconds//60} минут")
+                    return f"До выхода курса осталось: {diff_date.seconds//3600} часов и {diff_date.seconds//60} минут"
                 if diff_date.seconds//60 > 0:
-                    print(f"До выхода курса осталось: {diff_date.seconds // 3600} часов и {diff_date.seconds // 60} минут")
+                    return f"До выхода курса осталось: {diff_date.seconds // 3600} часов и {diff_date.seconds // 60} минут"
 
 
 #func(param)
