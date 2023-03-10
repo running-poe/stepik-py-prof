@@ -5,7 +5,7 @@ from datetime import date, time, datetime, timedelta
 # param = input()
 
 
-def func(arg, **kwargs):
+def func(arg, *args):
     curr_date = datetime.strptime(arg, "%d.%m.%Y %H:%M") - datetime.min
     release_date = datetime(year=2022, month=11, day=8, hour=12, minute=0) - datetime.min
     ds = {0: ('дней', 'часов', 'минут'),
