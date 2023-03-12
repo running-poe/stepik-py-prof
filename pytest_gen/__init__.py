@@ -18,12 +18,6 @@ class StepikTestGenerator:
 
         self.main_module = main_module
 
-    # читаем из потоков (строк)
-    #def set_input(self, stream_input_test: list, stream_results: list, method: str):
-    #    self.__stream_input_test = stream_input_test
-    #    self.__stream_result_test = stream_results
-     #   self.__method = method
-
     def doit(self):
         self.__stream_input_out = self.__parse(True, self.__stream_input_in)
         self.__stream_result_out = self.__parse(False, self.__stream_result_in)
@@ -62,12 +56,6 @@ class StepikTestGenerator:
                 f.write(f"    assert {self.__method}({s1}) == ({s2})\n\n\n")
 
 
-
-
-
-''' 
-    
-'''
 
 
 
