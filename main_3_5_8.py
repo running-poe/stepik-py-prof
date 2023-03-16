@@ -3,7 +3,7 @@
 from datetime import datetime
 
 
-# param = input()
+param = input()
 def choose_plural(i: int, index: int):
     ds = {0: ('дней', 'часов', 'минут'),
           1: ('день', 'час', 'минута'),
@@ -72,5 +72,5 @@ def func(arg):
 
 
 
-#func(param)
+print(func(param))
 

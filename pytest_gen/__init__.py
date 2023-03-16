@@ -53,7 +53,7 @@ class StepikTestGenerator:
                 s1 = f'{t_in}'.replace('[', '').replace(']', '')
                 s2 = f'{self.__stream_result_out[k]}'.replace('[', '').replace(']', '')
                 f.write(f"def test{k}():\n")
-                f.write(f"    assert {self.__method}({s1}) == ({s2})\n\n\n")
+                f.write(f"    assert {self.__method}({s1}) == [{s2}]\n\n\n")
 
 
 
